@@ -42,7 +42,7 @@ def newline(row):
     return row
 
 def removeEdited(row):
-    row['message'] = re.sub(r'\[i\].+编辑 \[\/i\]', '', row['message'])
+    row['message'] = re.sub(r'\[i.*?\].+编辑 \[\/i\]', '', row['message'])
     return row
 
 def retry(mw, title, wikitext):
